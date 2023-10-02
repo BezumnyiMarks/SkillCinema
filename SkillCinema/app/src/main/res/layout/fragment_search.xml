@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:tools="http://schemas.android.com/tools">
+ <data>
+  <variable
+      name="viewModel"
+      type="com.example.skillcinema.HomeViewModel" />
+  <import type="android.view.View"/>
+ </data>
+
+ <androidx.constraintlayout.widget.ConstraintLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     tools:context="Fragments.SearchFragment">
+
+  <FrameLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+   <androidx.constraintlayout.widget.ConstraintLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+   <FrameLayout
+       android:id="@+id/frameLayout"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.5"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent"
+       app:layout_constraintVertical_bias="0.05">
+
+    <EditText
+        android:id="@+id/searchView"
+        android:layout_width="308dp"
+        android:layout_height="30dp"
+        android:background="@drawable/searchview_background"
+        android:drawableStart="@drawable/ic_searchview_search_icon"
+        android:drawableEnd="@drawable/ic_searchview_options_icon"
+        android:drawablePadding="10dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textSize="14sp"
+        android:textColor="@color/text_black"
+        android:hint="Фильмы, сериалы"
+        android:ems="10"
+        tools:ignore="HardcodedText,RtlSymmetry" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonSettings"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="7dp"
+        android:background="@drawable/button_ripple"
+        android:drawableStart="@drawable/ic_searchview_options_icon"
+        android:layout_gravity="end|center_vertical"/>
+   </FrameLayout>
+
+   <androidx.recyclerview.widget.RecyclerView
+       android:id="@+id/recyclerView"
+       android:layout_width="0dp"
+       android:layout_height="0dp"
+       android:layout_marginTop="16dp"
+       android:orientation="vertical"
+       app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+       app:layout_constraintBottom_toTopOf="@id/bottomNav"
+       app:layout_constraintEnd_toEndOf="@id/frameLayout"
+       app:layout_constraintStart_toStartOf="@+id/frameLayout"
+       app:layout_constraintTop_toBottomOf="@id/frameLayout"
+       tools:listitem="@layout/home_recycler_item_model" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="24dp"
+        android:textSize="20sp"
+        android:textColor="@color/text_black"
+        android:text="К сожалению, по Вашему запросу ничего не найдено. Возможно, Вы просто описались."
+        android:gravity="center"
+        android:visibility="gone"
+        app:layout_constraintVertical_bias="0.15"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav"
+        app:itemIconTint="@color/bottom_nav_icon_color_selector"
+        app:itemTextColor="@color/bottom_nav_icon_color_selector"/>
+
+   </androidx.constraintlayout.widget.ConstraintLayout>
+
+   <FrameLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:background="@color/transparent"
+       android:clickable="@{viewModel.filteredFilmsLoading}"
+       android:visibility="@{viewModel.filteredFilmsLoading ? View.VISIBLE : View.GONE}">
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"/>
+
+   </FrameLayout>
+  </FrameLayout>
+ </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

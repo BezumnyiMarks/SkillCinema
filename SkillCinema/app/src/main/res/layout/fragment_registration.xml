@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.skillcinema.HomeViewModel" />
+        <import type="android.view.View"/>
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="Fragments.RegistrationFragment">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <at.blogc.android.views.ExpandableTextView
+                    android:id="@+id/textView"
+                    android:layout_width="260dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:maxLines="5"
+                    android:ellipsize="end"
+                    android:text="Дратути! Для продолжения работы необходимо получить API-ключ в личном профиле, зарегистрировавшись на сайте Кинопоиска. Этот ключ позволяет совершать не более 500 запросов в сутки. Скопируйте полученный ключ и вставьте его в указанное поле."
+                    android:textColor="@color/text_black"
+                    android:textSize="24sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.1"
+                    tools:ignore="HardcodedText" />
+
+                <EditText
+                    android:id="@+id/editText"
+                    android:layout_width="260dp"
+                    android:layout_height="70dp"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:windowSoftInputMode="adjustResize"
+                    android:hint="Водрузите ключ вот прям сюды"
+                    android:textColor="@color/text_dark_gray"
+                    android:textSize="16sp"
+                    android:layout_marginTop="30dp"
+                    app:layout_constraintEnd_toEndOf="@id/textView"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="@id/textView"
+                    app:layout_constraintTop_toBottomOf="@id/textView"
+                    app:layout_constraintVertical_bias="0.65"
+                    tools:ignore="HardcodedText" />
+
+                <Button
+                    android:id="@+id/buttonGetKey"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Регистрация"
+                    android:textColor="@color/text_blue"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintEnd_toEndOf="@id/editText"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="@id/editText"
+                    app:layout_constraintTop_toBottomOf="@id/editText"
+                    app:layout_constraintVertical_bias="0.0"
+                    tools:ignore="HardcodedText" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonSave"
+                    android:layout_width="108dp"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="50dp"
+                    android:background="@drawable/button_ripple"
+                    android:gravity="center"
+                    android:text="Готово"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="@id/buttonGetKey"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="@id/buttonGetKey"
+                    app:layout_constraintTop_toBottomOf="@id/buttonGetKey"
+                    app:layout_constraintVertical_bias="0.0"
+                    tools:ignore="HardcodedText,SpeakableTextPresentCheck" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                android:clickable="@{viewModel.countryGenreIDSaving}"
+                android:visibility="@{viewModel.countryGenreIDSaving ? View.VISIBLE : View.GONE}">
+
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"/>
+            </FrameLayout>
+        </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

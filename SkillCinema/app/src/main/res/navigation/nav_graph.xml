@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    tools:ignore="InvalidNavigation"
+    app:startDestination="@id/galleryFragment">
+
+    <fragment
+        android:id="@+id/onboardingFragment"
+        android:name="Fragments.OnboardingFragment"
+        android:label="fragment_onboarding"
+        tools:layout="@layout/fragment_onboarding" >
+
+        <action
+            android:id="@+id/action_onboardingFragment_to_registrationFragment"
+            app:destination="@id/registrationFragment"
+            app:popUpTo="@+id/onboardingFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="Fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_allItemsFragment"
+            app:destination="@id/allItemsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_filmInfoFragment"
+            app:destination="@id/filmInfoFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/allItemsFragment"
+        android:name="Fragments.AllItemsFragment"
+        android:label="fragment_all_items"
+        tools:layout="@layout/fragment_all_items" >
+        <action
+            android:id="@+id/action_allItemsFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@+id/homeFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_allItemsFragment_to_filmInfoFragment"
+            app:destination="@id/filmInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/filmInfoFragment"
+        android:name="Fragments.FilmInfoFragment"
+        android:label="fragment_film_info"
+        tools:layout="@layout/fragment_film_info" >
+        <action
+            android:id="@+id/action_filmInfoFragment_to_allItemsFragment"
+            app:destination="@id/allItemsFragment"
+            app:popUpTo="@+id/allItemsFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_filmInfoFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@+id/homeFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_filmInfoFragment_self"
+            app:destination="@id/filmInfoFragment" />
+        <action
+            android:id="@+id/action_filmInfoFragment_self2"
+            app:destination="@id/filmInfoFragment"
+            app:restoreState="true" />
+        <action
+            android:id="@+id/action_filmInfoFragment_to_staffInfoFragment"
+            app:destination="@id/staffInfoFragment" />
+        <action
+            android:id="@+id/action_filmInfoFragment_to_galleryFragment"
+            app:destination="@id/galleryFragment" />
+        <action
+            android:id="@+id/action_filmInfoFragment_to_seasonsFragment"
+            app:destination="@id/seasonsFragment" />
+        <action
+            android:id="@+id/action_filmInfoFragment_to_pictureFragment"
+            app:destination="@id/pictureFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/staffInfoFragment"
+        android:name="Fragments.StaffInfoFragment"
+        android:label="fragment_staff_info"
+        tools:layout="@layout/fragment_staff_info" >
+        <action
+            android:id="@+id/action_staffInfoFragment_to_filmInfoFragment"
+            app:destination="@id/filmInfoFragment" />
+        <action
+            android:id="@+id/action_staffInfoFragment_to_filmographyFragment"
+            app:destination="@id/filmographyFragment" />
+        <action
+            android:id="@+id/action_staffInfoFragment_to_pictureFragment"
+            app:destination="@id/pictureFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/galleryFragment"
+        android:name="Fragments.GalleryFragment"
+        android:label="fragment_gallery"
+        tools:layout="@layout/fragment_gallery" >
+        <action
+            android:id="@+id/action_galleryFragment_to_pictureFragment"
+            app:destination="@id/pictureFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/filmographyFragment"
+        android:name="Fragments.FilmographyFragment"
+        android:label="fragment_filmography"
+        tools:layout="@layout/fragment_filmography" >
+        <action
+            android:id="@+id/action_filmographyFragment_to_filmInfoFragment"
+            app:destination="@id/filmInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="Fragments.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_searchFragment_to_searchSettingsFragment"
+            app:destination="@id/searchSettingsFragment" />
+        <action
+            android:id="@+id/action_searchFragment_to_filmInfoFragment"
+            app:destination="@id/filmInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchSettingsFragment"
+        android:name="Fragments.SearchSettingsFragment"
+        android:label="fragment_search_settings"
+        tools:layout="@layout/fragment_search_settings" >
+        <action
+            android:id="@+id/action_searchSettingsFragment_to_searchYearFragment"
+            app:destination="@id/searchYearFragment" />
+        <action
+            android:id="@+id/action_searchSettingsFragment_to_searchCountryGenreFragment"
+            app:destination="@id/searchCountryGenreFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchYearFragment"
+        android:name="Fragments.SearchYearFragment"
+        android:label="fragment_search_year"
+        tools:layout="@layout/fragment_search_year" >
+    </fragment>
+    <fragment
+        android:id="@+id/searchCountryGenreFragment"
+        android:name="Fragments.SearchCountryGenreFragment"
+        android:label="fragment_search_country_genre"
+        tools:layout="@layout/fragment_search_country_genre" >
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="Fragments.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_filmInfoFragment"
+            app:destination="@id/filmInfoFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_allItemsFragment"
+            app:destination="@id/allItemsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pictureFragment"
+        android:name="Fragments.PictureFragment"
+        android:label="fragment_picture"
+        tools:layout="@layout/fragment_picture" />
+    <fragment
+        android:id="@+id/seasonsFragment"
+        android:name="Fragments.SeasonsFragment"
+        android:label="fragment_seasons"
+        tools:layout="@layout/fragment_seasons" />
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="Fragments.RegistrationFragment"
+        android:label="fragment_registration"
+        tools:layout="@layout/fragment_registration" >
+        <action
+            android:id="@+id/action_registrationFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@+id/registrationFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+</navigation>

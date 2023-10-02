@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.skillcinema.HomeViewModel" />
+        <import type="android.view.View"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="Fragments.HomeFragment">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="40dp"
+                android:layout_marginStart="24dp"
+                android:text="Skillcinema"
+                android:textColor="@color/text_black"
+                android:textSize="24sp"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintBottom_toTopOf="@id/scrollView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
+
+            <ScrollView
+                android:id="@+id/scrollView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toTopOf="@id/bottomNav"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/header"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="16dp"
+                    android:layout_gravity="center_horizontal">
+
+                    <com.example.skillcinema.HomeRecyclersContainer
+                        android:id="@+id/premieres"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp" />
+
+                    <com.example.skillcinema.HomeRecyclersContainer
+                        android:id="@+id/popular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <com.example.skillcinema.HomeRecyclersContainer
+                        android:id="@+id/dynamic1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <com.example.skillcinema.HomeRecyclersContainer
+                        android:id="@+id/dynamic2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <com.example.skillcinema.HomeRecyclersContainer
+                        android:id="@+id/dynamic3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <com.example.skillcinema.HomeRecyclersContainer
+                        android:id="@+id/best"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <com.example.skillcinema.HomeRecyclersContainer
+                        android:id="@+id/tvSeries"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </ScrollView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/dataValidatingRecyclerView"
+                android:layout_width="wrap_content"
+                android:layout_height="350dp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0"
+                tools:listitem="@layout/home_recycler_item_model"
+                android:visibility="gone"/>
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottomNav"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:menu="@menu/bottom_nav"
+                app:itemIconTint="@color/bottom_nav_icon_color_selector"
+                app:itemTextColor="@color/bottom_nav_icon_color_selector"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                android:clickable="@{viewModel.homeBusy}"
+                android:visibility="@{viewModel.homeBusy ? View.VISIBLE : View.GONE}">
+
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"/>
+            </FrameLayout>
+        </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

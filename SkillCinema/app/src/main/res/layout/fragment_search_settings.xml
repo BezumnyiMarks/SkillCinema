@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="Fragments.SearchSettingsFragment">
+
+ <TextView
+     android:id="@+id/headerTextView"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginTop="22dp"
+     android:gravity="center"
+     android:text="Настройки поиска"
+     android:textColor="@color/text_black"
+     android:textSize="20sp"
+     app:layout_constraintBottom_toBottomOf="parent"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toTopOf="parent"
+     app:layout_constraintVertical_bias="0.0"
+     tools:ignore="HardcodedText" />
+
+ <androidx.appcompat.widget.AppCompatButton
+     android:id="@+id/buttonBack"
+     style="@style/Widget.MaterialComponents.Button.TextButton"
+     android:layout_width="30dp"
+     android:layout_height="30dp"
+     android:background="@drawable/button_ripple"
+     android:drawableStart="@drawable/ic_icon_back_button"
+     app:layout_constraintBottom_toBottomOf="parent"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintHorizontal_bias="0.06"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toTopOf="parent"
+     app:layout_constraintVertical_bias="0.03" />
+
+ <TextView
+     android:id="@+id/radioHeaderTextView"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginStart="22dp"
+     android:layout_marginBottom="8dp"
+     android:gravity="center"
+     android:text="Показывать"
+     android:textColor="@color/search_fragment_text_color"
+     android:textSize="12sp"
+     app:layout_constraintBottom_toTopOf="@id/mainRadioGroup"
+     app:layout_constraintStart_toStartOf="parent"
+     tools:ignore="HardcodedText" />
+
+ <RadioGroup
+     android:id="@+id/mainRadioGroup"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:orientation="vertical"
+     app:layout_constraintBottom_toBottomOf="parent"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toBottomOf="@id/headerTextView"
+     app:layout_constraintVertical_bias="0.08"
+     app:layout_constraintHorizontal_bias="0.5">
+
+  <RadioGroup
+      android:id="@+id/radioGroup1"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+   <RadioButton
+       android:id="@+id/radioAll"
+       android:layout_width="wrap_content"
+       android:layout_height="31dp"
+       android:text="Все"
+       android:background="@drawable/left_up_radio_background_selector"
+       android:button="@drawable/null_radio_button_selector"
+       android:textColor="@drawable/radio_text_color_selector"
+       android:gravity="center"
+       tools:ignore="HardcodedText" />
+
+   <RadioButton
+       android:id="@+id/radioFilms"
+       android:layout_width="wrap_content"
+       android:layout_height="31dp"
+       android:text="Фильмы"
+       android:background="@drawable/center_radio_background_selector"
+       android:button="@drawable/null_radio_button_selector"
+       android:textColor="@drawable/radio_text_color_selector"
+       android:gravity="center"
+       tools:ignore="HardcodedText" />
+
+   <RadioButton
+       android:id="@+id/radioSeries"
+       android:layout_width="wrap_content"
+       android:layout_height="31dp"
+       android:text="Сериалы"
+       android:background="@drawable/right_up_radio_background_selector"
+       android:button="@drawable/null_radio_button_selector"
+       android:textColor="@drawable/radio_text_color_selector"
+       android:gravity="center"
+       tools:ignore="HardcodedText" />
+  </RadioGroup>
+
+  <RadioGroup
+      android:id="@+id/radioGroup2"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+   <RadioButton
+       android:id="@+id/radioTVShow"
+       android:layout_width="wrap_content"
+       android:layout_height="31dp"
+       android:text="ТВ-шоу"
+       android:background="@drawable/left_low_radio_background_selector"
+       android:button="@drawable/null_radio_button_selector"
+       android:textColor="@drawable/radio_text_color_selector"
+       android:gravity="center"
+       tools:ignore="HardcodedText" />
+
+   <RadioButton
+       android:id="@+id/radioMiniSeries"
+       android:layout_width="wrap_content"
+       android:layout_height="31dp"
+       android:text="Мини-сериалы"
+       android:background="@drawable/right_low_radio_background_selector"
+       android:button="@drawable/null_radio_button_selector"
+       android:textColor="@drawable/radio_text_color_selector"
+       android:gravity="center"
+       tools:ignore="HardcodedText" />
+  </RadioGroup>
+ </RadioGroup>
+
+ <androidx.constraintlayout.widget.ConstraintLayout
+     android:id="@+id/countryField"
+     android:layout_width="0dp"
+     android:layout_height="wrap_content"
+     android:clickable="true"
+     android:layout_marginTop="32dp"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toBottomOf="@id/mainRadioGroup">
+
+  <TextView
+      android:id="@+id/headerCountryTextView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="22dp"
+      android:gravity="center"
+      android:text="Страна"
+      android:textColor="@color/text_black"
+      android:textSize="16sp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:ignore="HardcodedText" />
+
+  <TextView
+      android:id="@+id/countryTextView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="22dp"
+      android:gravity="center"
+      android:text="СССР"
+      android:textColor="@color/search_fragment_text_color"
+      android:textSize="14sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:ignore="HardcodedText" />
+ </androidx.constraintlayout.widget.ConstraintLayout>
+
+ <androidx.constraintlayout.widget.ConstraintLayout
+     android:id="@+id/genreField"
+     android:layout_width="0dp"
+     android:layout_height="wrap_content"
+     android:clickable="true"
+     android:layout_marginTop="32dp"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toBottomOf="@id/countryField">
+
+  <TextView
+      android:id="@+id/headerGenreTextView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="22dp"
+      android:gravity="center"
+      android:text="Жанр"
+      android:textColor="@color/text_black"
+      android:textSize="16sp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:ignore="HardcodedText" />
+
+  <TextView
+      android:id="@+id/genreTextView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="22dp"
+      android:gravity="center"
+      android:text="Комедия"
+      android:textColor="@color/search_fragment_text_color"
+      android:textSize="14sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:ignore="HardcodedText" />
+ </androidx.constraintlayout.widget.ConstraintLayout>
+
+ <androidx.constraintlayout.widget.ConstraintLayout
+     android:id="@+id/yearField"
+     android:layout_width="0dp"
+     android:layout_height="wrap_content"
+     android:clickable="true"
+     android:layout_marginTop="32dp"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toBottomOf="@id/genreField">
+
+  <TextView
+      android:id="@+id/headerYearTextView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="22dp"
+      android:gravity="center"
+      android:text="Год"
+      android:textColor="@color/text_black"
+      android:textSize="16sp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:ignore="HardcodedText" />
+
+  <TextView
+      android:id="@+id/yearTextView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="22dp"
+      android:gravity="center"
+      android:text="С 1995 по 2995"
+      android:textColor="@color/search_fragment_text_color"
+      android:textSize="14sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:ignore="HardcodedText" />
+ </androidx.constraintlayout.widget.ConstraintLayout>
+
+ <androidx.constraintlayout.widget.ConstraintLayout
+     android:id="@+id/ratingField"
+     android:layout_width="0dp"
+     android:layout_height="wrap_content"
+     android:clickable="true"
+     android:layout_marginTop="32dp"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toBottomOf="@id/yearField">
+
+  <TextView
+      android:id="@+id/headerRatingTextView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="22dp"
+      android:gravity="center"
+      android:text="Рейтинг"
+      android:textColor="@color/text_black"
+      android:textSize="16sp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:ignore="HardcodedText" />
+
+  <TextView
+      android:id="@+id/ratingTextView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="22dp"
+      android:gravity="center"
+      android:text="Любой"
+      android:textColor="@color/search_fragment_text_color"
+      android:textSize="14sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:ignore="HardcodedText" />
+ </androidx.constraintlayout.widget.ConstraintLayout>
+
+ <com.google.android.material.slider.RangeSlider
+     android:id="@+id/slider"
+     android:layout_width="match_parent"
+     android:layout_height="30dp"
+     android:stepSize="1"
+     android:valueFrom="1"
+     android:valueTo="10"
+     android:value="2"
+     android:layout_marginStart="20dp"
+     android:layout_marginEnd="20dp"
+     android:layout_marginTop="32dp"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintHorizontal_bias="0.0"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toBottomOf="@id/ratingField"
+     app:thumbColor="@color/text_blue"
+     app:trackColorActive="@color/text_blue"
+     app:tickColor="@color/transparent"
+     app:trackColorInactive="@color/recycler_image_foreground"
+     app:values="@array/initial_slider_values"
+     app:labelBehavior="visible"
+     app:labelStyle="@style/searchSliderLabels"
+     tools:ignore="SpeakableTextPresentCheck" />
+
+ <TextView
+     android:id="@+id/radioHeaderSortTextView"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginStart="22dp"
+     android:layout_marginTop="32dp"
+     android:gravity="center"
+     android:text="Сортировать"
+     android:textColor="@color/search_fragment_text_color"
+     android:textSize="12sp"
+     app:layout_constraintTop_toBottomOf="@id/slider"
+     app:layout_constraintStart_toStartOf="parent"
+     tools:ignore="HardcodedText" />
+
+ <RadioGroup
+     android:id="@+id/radioGroupSort"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:orientation="horizontal"
+     android:layout_marginTop="8dp"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toBottomOf="@id/radioHeaderSortTextView">
+
+  <RadioButton
+      android:id="@+id/radioDate"
+      android:layout_width="wrap_content"
+      android:layout_height="31dp"
+      android:text="Дата"
+      android:background="@drawable/left_radio_background_selector"
+      android:button="@drawable/null_radio_button_selector"
+      android:textColor="@drawable/radio_text_color_selector"
+      android:gravity="center"
+      tools:ignore="HardcodedText" />
+
+  <RadioButton
+      android:id="@+id/radioPopularity"
+      android:layout_width="wrap_content"
+      android:layout_height="31dp"
+      android:text="Популярность"
+      android:background="@drawable/center_radio_sort_background_selector"
+      android:button="@drawable/null_radio_button_selector"
+      android:textColor="@drawable/radio_text_color_selector"
+      android:gravity="center"
+      tools:ignore="HardcodedText" />
+
+  <RadioButton
+      android:id="@+id/radioRating"
+      android:layout_width="wrap_content"
+      android:layout_height="31dp"
+      android:text="Рейтинг"
+      android:background="@drawable/right_radio_background_selector"
+      android:button="@drawable/null_radio_button_selector"
+      android:textColor="@drawable/radio_text_color_selector"
+      android:gravity="center"
+      tools:ignore="HardcodedText" />
+ </RadioGroup>
+
+ <ImageView
+     android:id="@+id/watchedIcon"
+     android:layout_width="40dp"
+     android:layout_height="32dp"
+     android:clickable="true"
+     android:src="@drawable/ic_not_watched_icon"
+     android:layout_marginTop="64dp"
+     android:layout_marginStart="22dp"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toBottomOf="@id/radioGroupSort"
+     tools:ignore="ContentDescription" />
+
+ <TextView
+     android:id="@+id/watchedTextView"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginStart="32dp"
+     android:gravity="center"
+     android:text="Не просмотрено"
+     android:textColor="@color/text_black"
+     android:textSize="16sp"
+     app:layout_constraintStart_toEndOf="@id/watchedIcon"
+     app:layout_constraintTop_toTopOf="@id/watchedIcon"
+     app:layout_constraintBottom_toBottomOf="@id/watchedIcon"
+     tools:ignore="HardcodedText" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

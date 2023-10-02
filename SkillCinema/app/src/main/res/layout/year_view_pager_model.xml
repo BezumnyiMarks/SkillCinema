@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/yearTextView1"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="0000"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_black"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/yearTextView2"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="40dp"
+            android:layout_marginStart="40dp"
+            android:gravity="center"
+            android:text="0000"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_black"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/yearTextView3"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="0000"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_black"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/yearTextView4"
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="0000"
+            android:textColor="@color/text_black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/yearTextView5"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="40dp"
+            android:layout_marginStart="40dp"
+            android:gravity="center"
+            android:text="0000"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_black"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/yearTextView6"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="0000"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_black"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/yearTextView7"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="0000"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_black"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/yearTextView8"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="40dp"
+            android:layout_marginStart="40dp"
+            android:gravity="center"
+            android:text="0000"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_black"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/yearTextView9"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="0000"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_black"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/yearTextView10"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="0000"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_black"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/yearTextView11"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="40dp"
+            android:layout_marginStart="40dp"
+            android:gravity="center"
+            android:text="0000"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_black"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/yearTextView12"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="0000"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_black"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,314 @@
+<resources>
+    <string name="app_name">SkillCinema</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="initial_slider_values">
+        <item>1</item>
+        <item>10</item>
+    </string-array>
+
+    <string-array name="countries">
+        <item>США</item>
+        <item>Швейцарии</item>
+        <item>Франции</item>
+        <item>Польши</item>
+        <item>Великобритании</item>
+        <item>Швеции</item>
+        <item>Индии</item>
+        <item>Испании</item>
+        <item>Германии</item>
+        <item>Италии</item>
+        <item>Гонконга</item>
+        <item>Германии (ФРГ)</item>
+        <item>Австралии</item>
+        <item>Канады</item>
+        <item>Мексики</item>
+        <item>Японии</item>
+        <item>Дании</item>
+        <item>Чехии</item>
+        <item>Ирландии</item>
+        <item>Люксембурга</item>
+        <item>Китая</item>
+        <item>Норвегии</item>
+        <item>Нидерландов</item>
+        <item>Аргентинв</item>
+        <item>Финляндии</item>
+        <item>Боснии и Герцеговины</item>
+        <item>Австрии</item>
+        <item>Тайваня</item>
+        <item>Новой Зеландии</item>
+        <item>Бразилии</item>
+        <item>Чехословакии</item>
+        <item>Мальты</item>
+        <item>СССР</item>
+        <item>России</item>
+        <item>Югославии</item>
+        <item>Португалии</item>
+        <item>Румынии</item>
+        <item>Хорватии</item>
+        <item>ЮАР</item>
+        <item>Кубы</item>
+        <item>Колумбии</item>
+        <item>Израиля</item>
+        <item>Намибии</item>
+        <item>Турции</item>
+        <item>Бельгии</item>
+        <item>Сальвадора</item>
+        <item>Исландии</item>
+        <item>Венгрии</item>
+        <item>Южной Кореи</item>
+        <item>Лихтенштейна</item>
+        <item>Болгарии</item>
+        <item>Филиппин</item>
+        <item>Доминиканы</item>
+        <item>Инкогнито</item>
+        <item>Марокко</item>
+        <item>Таиланда</item>
+        <item>Кении</item>
+        <item>Пакистана</item>
+        <item>Ирана</item>
+        <item>Панамы</item>
+        <item>Арубы</item>
+        <item>Ямайки</item>
+        <item>Греции</item>
+        <item>Туниса</item>
+        <item>Кыргызстана</item>
+        <item>Пуэрто Рико</item>
+        <item>Казахстана</item>
+        <item>Югославии (ФР)</item>
+        <item>Алжира</item>
+        <item>Германии (ГДР)</item>
+        <item>Сингапура</item>
+        <item>Словакии</item>
+        <item>Афганистана</item>
+        <item>Индонезии</item>
+        <item>Перу</item>
+        <item>Бермуд</item>
+        <item>Монако</item>
+        <item>Зимбабве</item>
+        <item>Вьетнама</item>
+        <item>Антильских Островов</item>
+        <item>Саудовской Аравии</item>
+        <item>Танзании</item>
+        <item>Ливии</item>
+        <item>Ливана</item>
+        <item>Кувейта</item>
+        <item>Египта</item>
+        <item>Литвы</item>
+        <item>Венесуэлы</item>
+        <item>Словении</item>
+        <item>Чили</item>
+        <item>Багам</item>
+        <item>Эквадора</item>
+        <item>Коста-Рики</item>
+        <item>Кипра</item>
+        <item>Уругвая</item>
+        <item>Ирака</item>
+        <item>Мартиники</item>
+        <item>Эстонии</item>
+        <item>ОАЭ</item>
+        <item>Бангладеша</item>
+        <item>Македонии</item>
+        <item>Гвинеи</item>
+        <item>Иордании</item>
+        <item>Латвии</item>
+        <item>Армении</item>
+        <item>Украины</item>
+        <item>Сирии</item>
+        <item>Шри-Ланки</item>
+        <item>Нигерии</item>
+        <item>Берега Слоновой кости</item>
+        <item>Грузии</item>
+        <item>Сенегала</item>
+        <item>Монголии</item>
+        <item>Габона</item>
+        <item>Замбии</item>
+        <item>Албании</item>
+        <item>Камеруна</item>
+        <item>Буркина-Фасо</item>
+        <item>Узбекистана</item>
+        <item>Малайзии</item>
+        <item>Сербии</item>
+        <item>Ганы</item>
+        <item>Таджикистана</item>
+        <item>Гаити</item>
+        <item>Конго (ДРК)</item>
+        <item>Гватемала</item>
+        <item>Российской империи</item>
+        <item>Беларуси</item>
+        <item>Молдовы</item>
+        <item>Азербайджана</item>
+        <item>Палестины</item>
+        <item>Оккупированной Палестинской территории</item>
+        <item>Северной Кореи</item>
+        <item>Никарагуа</item>
+        <item>Камбоджи</item>
+        <item>Анголы</item>
+        <item>Сербии и Черногории</item>
+        <item>Непала</item>
+        <item>Бенина</item>
+        <item>Гваделупы</item>
+        <item>Гренландии</item>
+        <item>Гвинеи-Бисау</item>
+        <item>Макао</item>
+        <item>Парагвая</item>
+        <item>Мавритании</item>
+        <item>Руанды</item>
+        <item>Фарерских островов</item>
+        <item>Кот-д’Ивуар</item>
+        <item>Гибралтара</item>
+        <item>Ботсваны</item>
+        <item>Боливии</item>
+        <item>Мадагаскара</item>
+        <item>Кабо-Верде</item>
+        <item>Чада</item>
+        <item>Мали</item>
+        <item>Фиджи</item>
+        <item>Бутана</item>
+        <item>Барбадоса</item>
+        <item>Тринидада и Тобаго</item>
+        <item>Мозамбика</item>
+        <item>Заира</item>
+        <item>Андорры</item>
+        <item>Туркменистана</item>
+        <item>Гайаны</item>
+        <item>Кореи</item>
+        <item>Нигера</item>
+        <item>Конго</item>
+        <item>Того</item>
+        <item>Ватикана</item>
+        <item>Черногории</item>
+        <item>Бурунди</item>
+        <item>Папуа - Новой Гвинеи</item>
+        <item>Бахрейна</item>
+        <item>Гондураса</item>
+        <item>Судана</item>
+        <item>Эфиопии</item>
+        <item>Йемена</item>
+        <item>Северного Вьетнама</item>
+        <item>Суринама</item>
+        <item>Маврикия</item>
+        <item>Белиза</item>
+        <item>Либерии</item>
+        <item>Лесото</item>
+        <item>Уганды</item>
+        <item>Каймановых островов</item>
+        <item>Антигуа и Барбуды</item>
+        <item>Западной Сахары</item>
+        <item>Сан-Марино</item>
+        <item>Гуама</item>
+        <item>Косова</item>
+        <item>Лаоса</item>
+        <item>Катара</item>
+        <item>Омана</item>
+        <item>Американских Виргинских островов</item>
+        <item>Сиама</item>
+        <item>Сьерра-Леоне</item>
+        <item>Эритреи</item>
+        <item>Сомали</item>
+        <item>Доминики</item>
+        <item>Бирмы</item>
+        <item>Реюньона</item>
+        <item>Федеративных Штатов Микронезии</item>
+        <item>Самоа</item>
+        <item>Американского Самоа</item>
+        <item>Свазиленда</item>
+        <item>Французской Полинезии</item>
+        <item>Мьянмы</item>
+        <item>Новой Каледонии</item>
+        <item>Французской Гвианы</item>
+        <item>Сент-Винсента и Гренадинов</item>
+        <item>Малави</item>
+        <item>Экваториальной Гвинеи</item>
+        <item>Коморы</item>
+        <item>Кирибати</item>
+        <item>Тувалу</item>
+        <item>Тимор-Лесте</item>
+        <item>ЦАР</item>
+        <item>Тонга</item>
+        <item>Гренады</item>
+        <item>Гамбии</item>
+        <item>Антарктиды</item>
+        <item>Островов Кука</item>
+        <item>Острова Мэна</item>
+        <item>Внешних малых островов США</item>
+        <item>Монтсеррата</item>
+        <item>Маршалловых островов</item>
+        <item>Бруней-Даруссалама</item>
+        <item>Сейшельских островов</item>
+        <item>Палау</item>
+        <item>Сент-Люсии</item>
+        <item>Вануату</item>
+        <item>Мальдив</item>
+        <item>Боснии</item>
+        <item>Уоллиса и Футуны</item>
+        <item>Белоруссии</item>
+        <item>Киргизии</item>
+    </string-array>
+
+    <string-array name="genres">
+        <item>Триллеры</item>
+        <item>Драмы</item>
+        <item>Криминал</item>
+        <item>Мелодрамы</item>
+        <item>Детективы</item>
+        <item>Фантастика</item>
+        <item>Приключенческие фильмы</item>
+        <item>Биографические фильмы</item>
+        <item>Фильмы-нуар</item>
+        <item>Вестерны</item>
+        <item>Боевики</item>
+        <item>Фэнтези</item>
+        <item>Комедии</item>
+        <item>Военные фильмы</item>
+        <item>Исторические фильмы</item>
+        <item>Музыка</item>
+        <item>Ужасы</item>
+        <item>Мультфильмы</item>
+        <item>Семейные фильмы</item>
+        <item>Мюзиклы</item>
+        <item>Спорт</item>
+        <item>Документальные фильмы</item>
+        <item>Короткометражки</item>
+        <item>Аниме</item>
+        <item>Нечто</item>
+        <item>Новости</item>
+        <item>Концерты</item>
+        <item>Порнушечка</item>
+        <item>Церемонии</item>
+        <item>Реальное ТВ</item>
+        <item>Игры</item>
+        <item>Ток-шоу</item>
+        <item>Детские фильмы</item>
+    </string-array>
+
+    <plurals name="seasons">
+        <item quantity="zero">%1$d сезонов</item>
+        <item quantity="one">%1$d сезон</item>
+        <item quantity="two">%1$d сезона</item>
+        <item quantity="few">%1$d сезона</item>
+        <item quantity="many">%1$d сезонов</item>
+        <item quantity="other">%1$d сезона</item>
+    </plurals>
+
+    <plurals name="series">
+        <item quantity="zero">%1$d серий</item>
+        <item quantity="one">%1$d серия</item>
+        <item quantity="two">%1$d серии</item>
+        <item quantity="few">%1$d серии</item>
+        <item quantity="many">%1$d серий</item>
+        <item quantity="other">%1$d серий</item>
+    </plurals>
+
+    <plurals name="films">
+        <item quantity="zero">%1$d фильмов</item>
+        <item quantity="one">%1$d фильм</item>
+        <item quantity="two">%1$d фильма</item>
+        <item quantity="few">%1$d фильма</item>
+        <item quantity="many">%1$d фильмов</item>
+        <item quantity="other">%1$d фильмов</item>
+    </plurals>
+
+</resources>

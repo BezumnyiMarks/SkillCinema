@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="Fragments.SearchYearFragment">
+
+ <TextView
+     android:id="@+id/headerTextView"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginTop="22dp"
+     android:gravity="center"
+     android:text="Период"
+     android:textColor="@color/text_black"
+     android:textSize="20sp"
+     app:layout_constraintBottom_toBottomOf="parent"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toTopOf="parent"
+     app:layout_constraintVertical_bias="0.0"
+     tools:ignore="HardcodedText" />
+
+ <androidx.appcompat.widget.AppCompatButton
+     android:id="@+id/buttonBack"
+     style="@style/Widget.MaterialComponents.Button.TextButton"
+     android:layout_width="30dp"
+     android:layout_height="30dp"
+     android:background="@drawable/button_ripple"
+     android:drawableStart="@drawable/ic_icon_back_button"
+     app:layout_constraintBottom_toBottomOf="parent"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintHorizontal_bias="0.06"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toTopOf="parent"
+     app:layout_constraintVertical_bias="0.03" />
+
+ <TextView
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginStart="52dp"
+     android:layout_marginBottom="8dp"
+     android:gravity="center"
+     android:text="Искать в период с"
+     android:textColor="@color/search_fragment_text_color"
+     android:textSize="14sp"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintBottom_toTopOf="@id/constraintSince"
+     tools:ignore="HardcodedText" />
+
+ <androidx.constraintlayout.widget.ConstraintLayout
+     android:id="@+id/constraintSince"
+     android:layout_width="300dp"
+     android:layout_height="wrap_content"
+     android:layout_marginTop="30dp"
+     android:background="@drawable/year_field_background"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintHorizontal_bias="0.5"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toBottomOf="@+id/headerTextView"
+     app:layout_constraintBottom_toTopOf="@id/constraintTo">
+
+  <TextView
+      android:id="@+id/yearPeriodSinceTextView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:gravity="center"
+      android:text="1995 - 2995"
+      android:textColor="@color/text_blue"
+      android:textSize="16sp"
+      android:textStyle="bold"
+      app:layout_constraintBottom_toTopOf="@id/viewPagerSince"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.072"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.5"
+      tools:ignore="HardcodedText" />
+
+  <androidx.appcompat.widget.AppCompatButton
+      android:id="@+id/buttonLessSince"
+      style="@style/Widget.MaterialComponents.Button.TextButton"
+      android:layout_width="30dp"
+      android:layout_height="30dp"
+      android:background="@drawable/button_ripple"
+      android:drawableStart="@drawable/ic_icon_back_button"
+      app:layout_constraintBottom_toTopOf="@id/viewPagerSince"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.824"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <androidx.appcompat.widget.AppCompatButton
+      android:id="@+id/buttonMoreSince"
+      style="@style/Widget.MaterialComponents.Button.TextButton"
+      android:layout_width="30dp"
+      android:layout_height="30dp"
+      android:background="@drawable/button_ripple"
+      android:drawableStart="@drawable/ic_icon_back_button"
+      android:rotation="180"
+      app:layout_constraintBottom_toTopOf="@id/viewPagerSince"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.942"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <androidx.viewpager2.widget.ViewPager2
+      android:id="@+id/viewPagerSince"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="50dp"
+      android:layout_marginTop="70dp"
+      android:layout_marginEnd="50dp"
+      android:layout_marginBottom="20dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:listitem="@layout/year_view_pager_model"/>
+ </androidx.constraintlayout.widget.ConstraintLayout>
+
+ <TextView
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginStart="52dp"
+     android:layout_marginBottom="8dp"
+     android:gravity="center"
+     android:text="Искать в период до"
+     android:textColor="@color/search_fragment_text_color"
+     android:textSize="14sp"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintBottom_toTopOf="@id/constraintTo"
+     tools:ignore="HardcodedText" />
+
+ <androidx.constraintlayout.widget.ConstraintLayout
+     android:id="@+id/constraintTo"
+     android:layout_width="300dp"
+     android:layout_height="wrap_content"
+     android:layout_marginTop="30dp"
+     android:background="@drawable/year_field_background"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toBottomOf="@+id/constraintSince"
+     app:layout_constraintBottom_toTopOf="@id/buttonSave">
+
+  <TextView
+      android:id="@+id/yearPeriodToTextView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:gravity="center"
+      android:text="1995 - 2995"
+      android:textColor="@color/text_blue"
+      android:textSize="16sp"
+      android:textStyle="bold"
+      app:layout_constraintBottom_toTopOf="@id/viewPagerTo"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.072"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.5"
+      tools:ignore="HardcodedText" />
+
+  <androidx.appcompat.widget.AppCompatButton
+      android:id="@+id/buttonLessTo"
+      style="@style/Widget.MaterialComponents.Button.TextButton"
+      android:layout_width="30dp"
+      android:layout_height="30dp"
+      android:background="@drawable/button_ripple"
+      android:drawableStart="@drawable/ic_icon_back_button"
+      app:layout_constraintBottom_toTopOf="@id/viewPagerTo"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.824"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <androidx.appcompat.widget.AppCompatButton
+      android:id="@+id/buttonMoreTo"
+      style="@style/Widget.MaterialComponents.Button.TextButton"
+      android:layout_width="30dp"
+      android:layout_height="30dp"
+      android:background="@drawable/button_ripple"
+      android:drawableStart="@drawable/ic_icon_back_button"
+      android:rotation="180"
+      app:layout_constraintBottom_toTopOf="@id/viewPagerTo"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.942"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <androidx.viewpager2.widget.ViewPager2
+      android:id="@+id/viewPagerTo"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="50dp"
+      android:layout_marginTop="70dp"
+      android:layout_marginEnd="50dp"
+      android:layout_marginBottom="20dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:listitem="@layout/year_view_pager_model"/>
+ </androidx.constraintlayout.widget.ConstraintLayout>
+
+ <androidx.appcompat.widget.AppCompatButton
+     android:id="@+id/buttonSave"
+     android:layout_width="125dp"
+     android:layout_height="36dp"
+     android:background="@drawable/button_ripple"
+     android:gravity="center"
+     android:text="Выбрать"
+     android:textColor="@color/white"
+     android:textSize="18sp"
+     app:layout_constraintBottom_toBottomOf="parent"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintHorizontal_bias="0.5"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toBottomOf="@id/constraintTo"
+     tools:ignore="HardcodedText,SpeakableTextPresentCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
