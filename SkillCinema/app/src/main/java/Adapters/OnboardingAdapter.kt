@@ -12,7 +12,7 @@ class OnboardingAdapter : RecyclerView.Adapter<OnboardingViewHolder>(){
         OnboardingAdapterItems(R.drawable.onboarding1, "Узнавай о премьерах"),
         OnboardingAdapterItems(R.drawable.onboarding2, "Создавай коллекции"),
         OnboardingAdapterItems(R.drawable.onboarding3, "Делись с друзьями"),
-        OnboardingAdapterItems(R.drawable.onboarding4, "Разлагайся перед телеком")
+        OnboardingAdapterItems(R.drawable.onboarding4, "Самообразовывайся перед телевизором")
     )
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): OnboardingViewHolder {
