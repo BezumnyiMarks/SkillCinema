@@ -7,3 +7,6 @@
 Стек технологий, использованных для создания приложения: Kotlin, Coroutines, MVVM, ROOM, Retrofit 2, AndroidX Navigation. 
 
 Ссылка на макет: https://www.figma.com/file/MxuwrBFd27nstefTfSeLCo/skillcinema?type=design&mode=design
+
+![image](https://github.com/BezumnyiMarks/SkillCinema/assets/93310097/280e7517-61aa-4078-a5c0-615a012c13a5)
+
