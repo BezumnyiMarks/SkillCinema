@@ -9,4 +9,6 @@
 Ссылка на макет: https://www.figma.com/file/MxuwrBFd27nstefTfSeLCo/skillcinema?type=design&mode=design
 
 ![image](https://github.com/BezumnyiMarks/SkillCinema/assets/93310097/280e7517-61aa-4078-a5c0-615a012c13a5)
+![image](https://github.com/BezumnyiMarks/SkillCinema/assets/93310097/a67c5988-28c5-4064-b3de-193857776c3e)
+
 
